@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="dog" class="com.youngbean7.pojo.Dog"/>
+    <bean id="cat111" class="com.youngbean7.pojo.Cat"/>
+
+<!--    <bean id="person" class="com.youngbean7.pojo.Person">-->
+<!--        <property name="name" value="youngbean7"/>-->
+<!--        <property name="dog" ref="dog"/>-->
+<!--        <property name="cat" ref="cat"/>-->
+<!--    </bean>-->
+
+<!--    byName自动装配
+        会自动在容器上下文中查找，和自己对象set方法后面的值相对应的beanid-->
+<!--    <bean id="person" class="com.youngbean7.pojo.Person" autowire="byName"/>-->
+
+<!--    byType自动装配
+        会自动在容器上下文中查找，和自己对象属性类型相同的bean-->
+    <bean id="person" class="com.youngbean7.pojo.Person" autowire="byType"/>
+</beans>

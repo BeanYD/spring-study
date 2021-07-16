@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="address" class="com.youngbean7.pojo.Address">
+        <property name="address" value="杭州"/>
+    </bean>
+    <bean id="student" class="com.youngbean7.pojo.Student">
+        <property name="name" value="youngbean7"/>
+        <property name="address">
+            <ref bean="address"></ref>
+        </property>
+        <property name="books">
+            <array>
+                <value>红楼梦</value>
+                <value>西游记</value>
+            </array>
+        </property>
+        <property name="hobbys">
+            <list>
+                <value>听歌</value>
+                <value>打球</value>
+            </list>
+        </property>
+        <property name="card">
+            <map>
+                <entry key="id" value="1111"/>
+                <entry key="No." value="32567"/>
+            </map>
+        </property>
+        <property name="games">
+            <set>
+                <value>绝地求生</value>
+                <value>地下城与勇士</value>
+            </set>
+        </property>
+        <property name="wife">
+            <null/>
+        </property>
+        <property name="info">
+            <props>
+                <prop key="学号">20190525</prop>
+                <prop key="性别">男</prop>
+                <prop key="籍贯">杭州</prop>
+            </props>
+        </property>
+    </bean>
+
+</beans>

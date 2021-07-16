@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    p命名空间：set注入、c命名空间：构造器注入-->
+
+    <bean id="user" class="com.youngbean7.pojo.User" p:name="youngBean" p:age="18"/>
+    <bean id="user2" class="com.youngbean7.pojo.User" c:name="oldBean" c:age="88" scope="prototype" />
+
+<!--
+        scope="singleton" : 单例模式（默认）
+        scope="prototype" : 原型模式
+        -->
+</beans>

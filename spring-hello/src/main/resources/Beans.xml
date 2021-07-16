@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!-- more bean definitions go here -->
+
+    <bean id="hello" class="com.youngbean7.pojo.Hello">
+        <property name="str" value="Spring" />
+    </bean>
+
+    <bean id="hello1" class="com.youngbean7.pojo.Hello1">
+        <constructor-arg name="str" value="YoungBean7" />
+    </bean>
+
+</beans>
